@@ -1,0 +1,18 @@
+# Rác của OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Secret / config cục bộ
+.env
+.env.*
+!.env.example
+
+# State cục bộ của agent
+.claude/settings.local.json
+
+# Dependency / build output (theo từng sub-project)
+node_modules/
+dist/
+build/
