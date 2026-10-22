@@ -1,37 +1,57 @@
-# ADR — Architecture Decision Records
+# ADR — Hồ sơ quyết định kiến trúc
 
-Mỗi decision một file, đánh số `NNNN-kebab-case-title.md`. Chúng ghi *vì sao* workspace và operating model của nó như hiện tại — cái "vì sao không làm cách khác" mà nếu không ghi sẽ mất trong chat.
+Mỗi quyết định được lưu trong một file riêng, có đánh số theo định dạng `NNNN-kebab-case-title.md`.
 
-Owner quản. Thứ gì xuyên suốt — operating model, convention của agent/workflow, permission, policy về tooling — thuộc về đây. Việc chiến thuật thì vào `../backlog/`; thư mục này dành cho decision.
+Các ADR ghi lại **lý do tại sao** workspace và mô hình vận hành được thiết kế như hiện tại. Đây là những lý do mang tính lâu dài, giải thích tại sao lựa chọn phương án này thay vì các phương án khác — những thông tin nếu không được ghi lại sẽ dễ bị thất lạc trong các cuộc hội thoại.
 
-**Đánh số:** `0000` là baseline hồi tố, ghi các nguyên tắc có sẵn. Decision về sau tăng dần từ `0001`. Khi một decision bị đảo ngược, đánh dấu ADR cũ `Superseded by NNNN` chứ không xoá.
+**Quyền quản lý:** Owner chịu trách nhiệm quản lý ADR.
 
-**Decision chưa chốt** nằm trong [CANDIDATES.md](CANDIDATES.md).
+Mọi quyết định có ảnh hưởng đến nhiều thành phần (cross-cutting) đều phải được ghi nhận tại đây, bao gồm:
 
-## Template
+- Mô hình vận hành.
+- Quy ước về agent và workflow.
+- Quyền hạn và phân quyền.
+- Chính sách sử dụng công cụ.
+
+Các công việc mang tính triển khai cụ thể (tactical work items) được quản lý trong `../backlog/`. Thư mục này chỉ dành cho các quyết định.
+
+**Quy tắc đánh số:**
+
+- `0000` là ADR ghi nhận hồi tố các nguyên tắc nền tảng đã tồn tại trước đó.
+- Các quyết định mới được đánh số tăng dần, bắt đầu từ `0001`.
+- Khi một quyết định bị đảo ngược hoặc thay thế, hãy cập nhật trạng thái ADR cũ thành `Superseded by NNNN` thay vì xóa file.
+
+**Các quyết định đang chờ xử lý hoặc chưa được đưa ra** được ghi nhận trong [CANDIDATES.md](CANDIDATES.md).
+
+## Mẫu ADR (Template)
 
 ```markdown
-# ADR NNNN: <title>
+# ADR NNNN: <Tiêu đề>
 
-**Status:** Proposed | Accepted | Superseded by <ADR-NNNN>
-**Date:** YYYY-MM-DD
-**Owner:** <the Owner>
+**Trạng thái:** Proposed | Accepted | Superseded by <ADR-NNNN>
+**Ngày:** YYYY-MM-DD
+**Người phụ trách:** <Owner>
 
-## Context
-Tình huống nào buộc phải quyết. Điều gì không hiển nhiên. Constraint nào quan trọng.
+## Bối cảnh
+Tình huống nào dẫn đến quyết định này?
+Điểm nào không hiển nhiên?
+Những ràng buộc nào cần được xem xét?
 
-## Decision
-Làm gì. Một hai câu, không úp mở.
+## Quyết định
+Chúng ta sẽ thực hiện điều gì?
+Trình bày trong một hoặc hai câu, không diễn đạt mơ hồ hoặc thiếu dứt khoát.
 
-## Alternatives considered
-- **<alt>:** vì sao không
+## Các phương án đã cân nhắc
+- **<Phương án>:** Lý do không lựa chọn.
 
-## Consequences
-Cái gì dễ hơn. Cái gì khó hơn. Cái gì cần theo dõi.
+## Hệ quả
+Điều gì sẽ trở nên dễ dàng hơn?
+Điều gì sẽ trở nên khó khăn hơn?
+Những vấn đề nào cần tiếp tục theo dõi?
 ```
 
-## Index
+## Danh sách ADR (Index)
 
-| ADR | Decision | Date |
+| ADR | Quyết định | Ngày |
 |---|---|---|
-| [0000](0000-baseline-operating-principles.md) | Baseline — PM không code, board là file, đặt tên kebab/ALL_CAPS | 2026-01-01 |
+| [0000](0000-baseline-operating-principles.md) | Nguyên tắc vận hành nền tảng — PM không viết code, quản lý công việc bằng file, quy tắc đặt tên `kebab-case`/`ALL_CAPS` | 2026-01-01 |

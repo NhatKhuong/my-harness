@@ -367,3 +367,5 @@ File-based Source of Truth
 **Documentation của surface là source of truth.**
 
 **Evidence là cơ sở để xác nhận Done.**
+
+**Những bài học phát sinh trong quá trình phát triển dự án không được thêm trực tiếp vào pm-playbook.md. Phải tạo Decision tương ứng. pm-playbook.md chỉ được chỉnh sửa có kiểm soát từ Owner**

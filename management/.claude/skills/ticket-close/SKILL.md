@@ -61,11 +61,8 @@ Ví dụ:
 * Có khoảng trống trong specification.
 * Có edge case trong autonomy rubric.
 
-Sau đó **phải xử lý ngay** bằng cách đưa insight đó vào một trong các nơi phù hợp:
+Sau đó **phải xử lý ngay** bằng cách đưa insight đó vào một `decision` để tuân thủ trong tương lai.
 
-* `pm-playbook`
-* một `decision`
-* một ticket mới.
 
 `None` là câu trả lời hợp lệ, nhưng phải ghi rõ:
 

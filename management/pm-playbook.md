@@ -449,7 +449,7 @@ Ví dụ:
 API Agent chưa biết rằng public API phải có OpenAPI documentation.
 
 Action:
-Bổ sung rule này vào PM Playbook.
+Bổ sung rule này bằng cách tạo Decision.
 ```
 
 Nếu không có bài học mới:
@@ -459,11 +459,8 @@ Harness Delta:
 None.
 ```
 
-Nếu có bài học quan trọng, PM phải **action ngay** bằng một trong các cách:
+Nếu có bài học quan trọng, PM phải **action ngay** bằng cách tạo một Decision tương ứng để lưu lại bài học cho những lần làm việc tiếp theo chứ không được cập nhật vào pm-playbook.md.
 
-* Cập nhật Playbook.
-* Tạo Decision.
-* Tạo ticket tiếp theo.
 
 ---
 
@@ -555,3 +552,4 @@ Nguồn sự thật duy nhất về trạng thái công việc
 **Owner giữ quyền quyết định cuối cùng.**
 **Ticket là specification.**
 **Evidence mới được xem là Done.**
+**Những bài học phát sinh trong quá trình phát triển dự án không được thêm trực tiếp vào pm-playbook.md. Phải tạo Decision tương ứng. pm-playbook.md chỉ được chỉnh sửa có kiểm soát từ Owner**
