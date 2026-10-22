@@ -33,6 +33,16 @@ Nếu không trả lời được câu hỏi này → skill không nên tồn t�
 
 ---
 
+# Tier 2 — Surface Setup
+
+Chạy khi thêm một surface / dự án mới, hoặc khi luật của surface đã lệch so với code.
+
+| Skill                                   | Rule được bảo vệ                                                                                                                                                  |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`surface-docs`](surface-docs/SKILL.md) | **`documents/` là luật**: luật phải viết từ fact có nguồn (code hoặc Owner), không bịa · **Contract thì phải hỏi**: mọi contract được Owner xác nhận trước khi ghi |
+
+---
+
 # Cách sử dụng Skill
 
 PM chạy một skill khi tình huống thực tế phù hợp với mô tả của skill đó.
